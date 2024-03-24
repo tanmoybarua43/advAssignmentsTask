@@ -1,5 +1,5 @@
 
-
+// character fetch function
 let getCharacterInfo = () => {
     let characterName = document.getElementById('characterInput').value;
     fetch(`https://swapi.dev/api/people/?search=${characterName}`)
@@ -25,7 +25,7 @@ let getCharacterInfo = () => {
         })
         .catch(error => console.error('Error fetching character information:', error));
 }
-
+// star war films name fetch function
 let getFilmInfo = () => {
     fetch('https://swapi.dev/api/films/')
         .then(response => response.json())
