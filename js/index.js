@@ -1,14 +1,4 @@
-// let weatherData = async(link) => {
-//     let data = await fetch(link)
-//     console.log(data.res);
-// }
-// weatherData("https://www.swapi.tech/api/people/1")
-// console.log(weatherData);
 
-// fetch("https://www.swapi.tech/api/people/1/")
-// .then(res => res.json())
-// .then(data => console.log(data.result))
-// .catch(err => console.error(err))
 
 let getCharacterInfo = () => {
     let characterName = document.getElementById('characterInput').value;
@@ -25,7 +15,11 @@ let getCharacterInfo = () => {
                     <p>Birth Year: ${character.birth_year}</p>
                 `;
                 document.getElementById('characterInfo').innerHTML = info;
-            } else {
+            }
+            else if(character === ""){
+                document.getElementById('characterInfo').innerHTML = "<p>Character not found!</p>";
+            } 
+            else {
                 document.getElementById('characterInfo').innerHTML = "<p>Character not found!</p>";
             }
         })
